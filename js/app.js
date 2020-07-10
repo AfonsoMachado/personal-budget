@@ -277,6 +277,7 @@ function carregaListaDespesa(despesas = Array(), filtro = false) {
 
 }
 
+
 function pesquisarDespesa() {
     // Capturando os dados inseridos no formulario
     let ano = document.getElementById('ano').value
