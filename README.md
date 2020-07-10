@@ -1,2 +1,2 @@
 # personal-budget
- Implementação de um webapp que insere dados de despesas financeiras pessoais, e salva esses dados persistindo-os no cache do navegador. Os dados podem ser posteriormente consultados e excluidos
+ Implementation of a webapp that inserts personal financial expense data, and saves that data by persisting it in the browser cache. The data can later be consulted and deleted
