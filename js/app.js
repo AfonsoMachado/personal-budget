@@ -237,7 +237,8 @@ function carregaListaDespesa(despesas = Array(), filtro = false) {
 
         linha.insertCell(1).innerHTML = despesa.tipo
         linha.insertCell(2).innerHTML = despesa.descricao
-        linha.insertCell(3).innerHTML = despesa.valor
+        // Padrão de valor em reais
+        linha.insertCell(3).innerHTML = 'R$ ' + parseFloat(despesa.valor).toFixed(2).replace('.',',').replace(/(\d)(?=(\d{3})+\,)/g, '$1.')
 
         // botão de exclusão
         let btn = document.createElement("button")
