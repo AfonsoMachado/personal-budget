@@ -248,10 +248,26 @@ function carregaListaDespesa(despesas = Array(), filtro = false) {
             //remover a despesa
             let id = this.id.replace('id_despesa_', '')
             //alert(id)
-            bd.remover(id)
 
-            // atualizando a pagina
-            window.location.reload()
+
+            //  // Gerando modal de alerta de exclusão
+            document.getElementById('modal2_titulo').innerHTML = 'Tem certeza que deseja excluir esse registro?'
+            document.getElementById('modal2_titulo_div').className = 'modal-header text-danger'
+            document.getElementById('modal2_conteudo').innerHTML = 'Caso realize a exclusão e deseje reverter, esse registro deverá ser inserido novamente manualmente'
+            document.getElementById('modal2_btn').innerHTML = 'Excluir'
+            document.getElementById('modal2_btn').className = 'btn btn-danger'
+            
+            // // dialog de erro
+            $('#modalExclusao').modal('show')
+
+            document.getElementById('modal2_btn').onclick = function() {
+                // Excluindo o registro
+                bd.remover(id)
+
+                // atualizando a pagina
+                window.location.reload()
+            }
+            
         }
         linha.insertCell(4).append(btn)
 
